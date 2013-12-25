@@ -25,10 +25,10 @@ module.exports = function(gc) {
 		})(req, res, next);
 	};
 	
-	gc.get('/', getContact);
-	gc.post('/', postContact);
+//	gc.get('/', getContact);
+//	gc.post('/', postContact);
 	gc.get('/index', getIndex);
 	gc.post('/index', postIndex);
-	gc.get('/dashboard', gc.auth.ensureAuthenticated, getDashboard);
-	gc.get('/logout', getLogout);
+//	gc.get('/dashboard', gc.auth.ensureAuthenticated, getDashboard);
+//	gc.get('/logout', getLogout);
 };

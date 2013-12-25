@@ -15,6 +15,11 @@ mongoose.connect(uriString, mongoOptions, function(err, res) {
 });
 
 // schemas
+var UserSchema = new mongoose.Schema({
+  username: { type: String },
+  password: { type: String },
+  email: {type: String}
+});
 
 // bcrypt
 UserSchema.pre('save', function(next) {

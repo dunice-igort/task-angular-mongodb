@@ -29,5 +29,5 @@ var site = require('../routes/site')(gc);
 
 // start
 gc.listen(8181, function() {
-	console.log('Express server listening in %s mode...', gc.settings.env);
+	console.log('Express server listening in %s mode, port...', gc.settings.env, 8181);
 });

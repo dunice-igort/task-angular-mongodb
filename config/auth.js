@@ -1,6 +1,6 @@
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-var db = require('../db/gradecaddy');
+//var db = require('../db/gradecaddy');
 
 passport.serializeUser(function(user, done) {
 	done(null, user.id);
