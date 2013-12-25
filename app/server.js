@@ -2,14 +2,18 @@
 var gcRootDir = __dirname;
 var express = require('express'); // web framework
 var path = require('path'); // file path utilities
+var nm = require('express-namespace')
 var gc = express();
+
+
+
 gc.passport = require('passport');
 gc.auth = require('../config/auth');
 gc.db = require('../db/database');
 
 // configure
 gc.configure(function() {
-	gc.set('views', '../views');
+	gc.set('views', path.join(__dirname, '../views'));
 	gc.set('view engine', 'ejs');
 	gc.use(express.logger('dev'));
 	gc.use(express.cookieParser());
@@ -27,7 +31,17 @@ gc.configure(function() {
 var api = require('../routes/api')(gc);
 var site = require('../routes/site')(gc);
 
+//server.namespace('/dashboard', require('../routes/dashboard')
+//  .boot.bind(this, gc))
+//
 // start
-gc.listen(8181, function() {
+var server = gc.listen(8181, function() {
 	console.log('Express server listening in %s mode, port...', gc.settings.env, 8181);
 });
+
+
+gc.namespace("/dashboard", require('../routes/dashboard')
+  .boot.bind(this, gc))
+//
+//gc.namespace('/dashboard', require('../routes/dashboard')
+//  .boot.bind(this, gc))
