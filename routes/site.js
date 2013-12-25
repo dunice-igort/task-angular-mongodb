@@ -25,7 +25,9 @@ module.exports = function (gc) {
     })(req, res, next);
   };
 
-//	gc.get('/', getContact);
+	gc.get('/', function(req, res){
+    res.redirect('/dashboard')
+  });
 //	gc.post('/', postContact);
   gc.get('/index', getIndex);
   gc.post('/index', postIndex);

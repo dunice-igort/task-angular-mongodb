@@ -4,28 +4,27 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <button id="addTodo" class="btn" ng-click="onCreate()">Add</button>
             <div class="row todoItem" ng-repeat="todo in todos">
-                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                        <div class="item-checkbox">
-                            <input type="checkbox" ng-model="todo.checkbox" ng-checked="todo.checkbox" ng-disabled="!todo.disabled">
-                            <input type="checkbox" ng-model="todo.checkbox2" ng-checked="todo.checkbox2" ng-disabled="!todo.disabled">
-                            <input type="checkbox" ng-model="todo.checkbox3" ng-checked="todo.checkbox3" ng-disabled="!todo.disabled">
-                        </div>
-                        <div class="titleTodo">
-                            <input id="todo-title" type="text" ng-model="todo.title" ng-show="todo.disabled">
-                            <label class="word_wrap" ng-hide="todo.disabled">{{todo.title}}</label>
-                        </div>
-                        <div>
-                            <input type="radio" ng-model="todo.radiocheck" value="1" ng-disabled="!todo.disabled">
-                            <input type="radio" ng-model="todo.radiocheck" value="2" ng-disabled="!todo.disabled">
-                            <input type="radio" ng-model="todo.radiocheck" value="3" ng-disabled="!todo.disabled">
-                        </div>
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <div class="item-checkbox">
+                        <input type="checkbox" ng-model="todo.checkbox" ng-checked="todo.checkbox" ng-disabled="!todo.disabled">
+                        <input type="checkbox" ng-model="todo.checkbox2" ng-checked="todo.checkbox2" ng-disabled="!todo.disabled">
+                        <input type="checkbox" ng-model="todo.checkbox3" ng-checked="todo.checkbox3" ng-disabled="!todo.disabled">
                     </div>
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                        <button id="editTodo" class="btn btn-default" ng-hide="todo.disabled" ng-click="edit($index)" >Edit</button>
-                        <button id="saveTodo" class="btn btn-default" ng-show="todo.disabled" ng-click="onUpdate(todo, $index)">Save</button>
-                        <button id="deleteTodo" class="btn btn-default" ng-click="onDelete(todo)">Delete</button>
+                    <div class="titleTodo">
+                        <input id="todo-title" type="text" ng-model="todo.title" ng-show="todo.disabled">
+                        <label class="word_wrap" ng-hide="todo.disabled">{{todo.title}}</label>
                     </div>
-
+                    <div>
+                        <input type="radio" ng-model="todo.radiocheck" value="1" ng-disabled="!todo.disabled">
+                        <input type="radio" ng-model="todo.radiocheck" value="2" ng-disabled="!todo.disabled">
+                        <input type="radio" ng-model="todo.radiocheck" value="3" ng-disabled="!todo.disabled">
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <button id="editTodo" class="btn btn-default" ng-hide="todo.disabled" ng-click="edit($index)" >Edit</button>
+                    <button id="saveTodo" class="btn btn-default" ng-show="todo.disabled" ng-click="onUpdate(todo, $index)">Save</button>
+                    <button id="deleteTodo" class="btn btn-default" ng-click="onDelete(todo)">Delete</button>
+                </div>
             </div>
         </div>
     </div>
