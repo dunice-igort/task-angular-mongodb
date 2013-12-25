@@ -1,0 +1,27 @@
+body {
+  padding: 20px;
+}
+
+.todoItem {
+  padding: 10px;
+  border: 1px solid lightgray;
+  margin: 10px 0px;
+}
+
+.todoItem .titleTodo {
+  min-height: 20px;
+  cursor: text;
+  /*background-color: lightgrey;*/
+}
+
+.todoItem .titleTodo label {
+  width: 100%
+}
+
+.todoItem .titleTodo input {
+  width: 100%
+}
+
+.word_wrap {
+  word-wrap: break-word;
+}

@@ -21,6 +21,14 @@ var UserSchema = new mongoose.Schema({
   email: {type: String}
 });
 
+var TodosSchema = new mongoose.Schema({
+  title: { type: String }
+  , checkbox: { type: Boolean }
+  , checkbox2: { type: Boolean }
+  , checkbox3: { type: Boolean }
+  , radiocheck: { type: String }
+});
+
 // bcrypt
 UserSchema.pre('save', function(next) {
 	var user = this;
@@ -47,4 +55,7 @@ UserSchema.methods.comparePassword = function(candidatePassword, cb) {
 	});
 };
 
+
+
 // models
+mongoose.model('dashboard', TodosSchema);

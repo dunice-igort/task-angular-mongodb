@@ -1,0 +1,37 @@
+.dropdown.open,
+.dropdown.open-add,
+.dropdown.open-remove,
+.dropup.open,
+.dropup.open-add,
+.dropup.open-remove {
+    transition:all 0.3s ease-in-out;
+}
+
+.dropdown.open-add > .dropdown-menu,
+.dropdown.open-remove > .dropdown-menu,
+.dropup.open-add > .dropdown-menu,
+.dropup.open-remove > .dropdown-menu {
+    transition:all 0.3s ease-in-out;
+    display: block !important;
+}
+
+.dropdown.open-add > .dropdown-menu,
+.dropup.open-add > .dropdown-menu {
+    opacity: 0;
+    display: block !important;
+    -webkit-transform:translateY(-50px) scaleY(0.2);
+}
+
+.dropdown.open-add-active > .dropdown-menu,
+.dropdown.open-remove > .dropdown-menu,
+.dropup.open-add-active > .dropdown-menu,
+.dropup.open-remove > .dropdown-menu {
+    opacity: 1;
+    -webkit-transform:translateY(0px) scaleY(1);
+}
+
+.dropdown.open-remove-active > .dropdown-menu,
+.dropup.open-remove-active > .dropdown-menu {
+    opacity: 0;
+    -webkit-transform:translateY(-50px) scaleY(0.2);
+}

@@ -1,0 +1,102 @@
+/* app css stylesheet */
+a:hover{
+    text-decoration: none!important;
+}
+html {
+    height: 100%;
+    min-width: 480px;
+}
+body {
+    height: 100%;
+    padding-top: 5px;
+    background: black!important;
+}
+body > .container {
+    overflow: hidden;
+    background: white!important;
+}
+#main {
+    background: white!important;
+    min-height: 80%;
+}
+
+.main_cont{
+    min-height: 600px!important;
+    background: white;
+}
+
+h1 {
+    border-bottom: 1px solid gray;
+}
+
+.table td.tdRight {
+    text-align: right;
+}
+.table td.tdCenter {
+    text-align: center;
+}
+.table th.thRight {
+    text-align: right;
+}
+.table th.thCenter {
+    text-align: center;
+}
+.table-nonfluid {
+    width: auto;
+}
+
+.white{
+    color: white;
+}
+.blankspace{
+    height: 25px;
+}
+.blankspace-mini{
+    height: 5px;
+}
+.main_cont{
+    min-height: 500px!important;
+}
+
+
+.padd-left{
+    padding-left: 100px;
+}
+
+.underline{
+    border-bottom: 2px solid grey
+}
+.align-left{
+    text-align: left;
+}
+.align-center{
+    text-align: center;
+}
+.align-right{
+     text-align: right;
+}
+.button-wide{
+    width: 500px;
+}
+.top-buffer { margin-top:20px; }
+
+#registr { padding: 20px }
+
+#cart-login {
+  padding-right: 20px;
+  color: #FFFFFF;
+}
+
+.header_logo {
+  width: 10%;
+  position: absolute;
+  top: 5%;
+}
+
+#instagram-list .inst {
+  margin-right: 0px;
+}
+
+#youtube-list .yt {
+  margin-right: 0px;
+}
